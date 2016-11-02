@@ -3,6 +3,7 @@ package com.eposp.toolbartest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -35,7 +36,7 @@ public class MainActivity extends BaseActivity {
         toolbar.setSubtitle("Subtitle");//设置子标题
 //        toolbar.setSubtitleTextColor(getResources().getColor(android.R.color.darker_gray));//设置子标题颜色
         toolbar.setSubtitleTextAppearance(this, R.style.Theme_ToolBar_Base_Subtitle);//设置子标题的外观，包括文字颜色，文字大小等
-
+        Log.d("TAG","测试修改内冲突的情况");
     }
 
     @Override
