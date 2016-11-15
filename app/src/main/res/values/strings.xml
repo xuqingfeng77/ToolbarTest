@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ToolbarTest</string>
+    <string name="menu_search">menu_search</string>
+    <string name="menu_notifications">menu_notifications</string>
+    <string name="item_01">item_01</string>
+    <string name="item_02">item_02</string>
 </resources>
