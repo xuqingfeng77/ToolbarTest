@@ -22,7 +22,7 @@ public class MainActivity extends BaseActivity {
         setTitleColor(R.color.white);
 
         toolbar.setLogo(R.mipmap.ic_launcher);
-//        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.mipmap.back_nor);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,14 +30,15 @@ public class MainActivity extends BaseActivity {
                 Toast.makeText(MainActivity.this, "不得了要火了", Toast.LENGTH_SHORT).show();
             }
         });
-        toolbar.setTitle("Title");//设置主标题
+        getSupportActionBar().setTitle("Title");//设置标题
+        toolbar.setTitle("Title");//设置主标题 此方法设置无效果  办法：http://blog.csdn.net/zhyh1986/article/details/52220907
 //        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));//设置主标题颜色
         toolbar.setTitleTextAppearance(this, R.style.Theme_ToolBar_Base_Title);//修改主标题的外观，包括文字颜色，文字大小等
 
         toolbar.setSubtitle("Subtitle");//设置子标题
 //        toolbar.setSubtitleTextColor(getResources().getColor(android.R.color.darker_gray));//设置子标题颜色
         toolbar.setSubtitleTextAppearance(this, R.style.Theme_ToolBar_Base_Subtitle);//设置子标题的外观，包括文字颜色，文字大小等
-        Log.d("TAG","测试修改内冲突的情况");
+        Log.d("TAG", "测试修改内冲突的情况");
 
         /**
          * 修改更多的图片是有方法的
@@ -49,16 +50,16 @@ public class MainActivity extends BaseActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 int menuItemId = item.getItemId();
                 if (menuItemId == R.id.action_search) {
-                    Toast.makeText(MainActivity.this , R.string.menu_search , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.menu_search, Toast.LENGTH_SHORT).show();
 
                 } else if (menuItemId == R.id.action_notification) {
-                    Toast.makeText(MainActivity.this , R.string.menu_notifications , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.menu_notifications, Toast.LENGTH_SHORT).show();
 
                 } else if (menuItemId == R.id.action_item1) {
-                    Toast.makeText(MainActivity.this , R.string.item_01 , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.item_01, Toast.LENGTH_SHORT).show();
 
                 } else if (menuItemId == R.id.action_item2) {
-                    Toast.makeText(MainActivity.this , R.string.item_02 , Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.item_02, Toast.LENGTH_SHORT).show();
 
                 }
                 return true;
